@@ -1,0 +1,238 @@
+a {
+    text-decoration: none;
+}
+
+.profile {
+    margin: 10% 0%;
+}
+
+.personal_info_container {
+    width: 22em;
+    border-radius: 17px;
+    background: white;
+    padding: 5vh 0vw;
+    height: 324px;
+}
+
+.project_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-row: 12px;
+    padding: 9px 0px;
+    row-gap: 32px;
+    column-gap: 13px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.aut_pub {
+    color: gray;
+    font-size: 12px;
+}
+
+.container_card {
+    padding: 1vh 2vw;
+    color: var(--dark_blue);
+}
+
+.container_card header {
+    display: grid;
+    gap: 22px;
+}
+
+.container_card header .title {
+    display: grid;
+    gap: 22px;
+}
+
+.container_card header h2 {
+    text-align: center;
+}
+
+
+/****/
+
+.container_card .desc {
+    height: 44px;
+    overflow: hidden;
+}
+
+.container_card header .liks_shows ul {
+    font-size: 12px;
+    width: 100%;
+}
+
+.hr::before {
+    content: "";
+    width: 99%;
+    background-color: #186d80;
+    display: block;
+    position: relative;
+    height: 1px;
+    background: radial-gradient(#186d80, transparent);
+}
+
+.liks_shows {
+    margin-top: 13px;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 23px;
+    align-items: center;
+}
+
+.container_card header .liks_shows {
+    margin-top: 1px;
+}
+
+.liks_shows ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+}
+
+.liks_shows ul li a {
+    text-decoration: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+/* btn */
+
+.show_more {
+    font-size: 16px;
+    padding: 7px 21px 7px;
+    outline: 0;
+    border: 1px solid #186d80;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.show_more:after {
+    content: "";
+    background-color: var(--light_blue);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.show_more:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+
+/*Responsive Adding Media Queries*/
+
+@media screen and (max-width: 800px) {
+    .profile {
+        padding: 13% 0%;
+    }
+    nav {
+        position: fixed;
+        z-index: 3;
+        background-color: #ecf1f4cf;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        left: 8%;
+        top: 44%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+        z-index: 2000;
+    }
+    .nav-links {
+        background: var(--light);
+        position: fixed;
+        opacity: 1;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        justify-content: space-evenly;
+        z-index: 1000;
+    }
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade {
+        opacity: 1;
+    }
+    /* Navigation Bar Icon on Click*/
+    .toggle .bars1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .bars2 {
+        transition: all 0s ease;
+        width: 0;
+    }
+    .toggle .bars3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+/**/
+
+.desc {
+    height: 46px;
+    overflow: hidden;
+}
+
+.container_card header h2 {
+    text-align: center;
+    overflow: hidden;
+    height: 70px;
+}
+
+.desc {
+    height: 48px;
+    overflow: hidden;
+}
